@@ -4,7 +4,7 @@ public record CreateProductCommand(string Name, List<string> Category, string De
     : ICommand<CreateProductResult>;
 public record CreateProductResult(Guid Id);
 
-/*public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
+public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
 {
     public CreateProductCommandValidator()
     {
@@ -14,7 +14,7 @@ public record CreateProductResult(Guid Id);
         RuleFor(x => x.Price).GreaterThan(0).WithMessage("Price must be greater than 0");
     }
 }
-*/
+
 internal class CreateProductCommandHandler
     (IDocumentSession session)
     : ICommandHandler<CreateProductCommand, CreateProductResult>
@@ -23,7 +23,9 @@ internal class CreateProductCommandHandler
     {
         //create Product entity from command object
         //save to database
-        //return CreateProductResult result               
+        //return CreateProductResult result
+
+        
 
         var product = new Product
         {
