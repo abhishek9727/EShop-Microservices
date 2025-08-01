@@ -19,6 +19,7 @@ namespace Catalog.API.Products.GetProductByCategroy
                 .ToListAsync();
 
             return new GetProductByCategoryResult(products);
+
         }
     }
 }
