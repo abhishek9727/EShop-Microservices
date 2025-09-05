@@ -1,4 +1,4 @@
-﻿/*using FluentValidation;
+﻿using FluentValidation;
 
 namespace Ordering.Application.Orders.Commands.DeleteOrder;
 
@@ -14,4 +14,3 @@ public class DeleteOrderCommandValidator : AbstractValidator<DeleteOrderCommand>
         RuleFor(x => x.OrderId).NotEmpty().WithMessage("OrderId is required");
     }
 }
-*/

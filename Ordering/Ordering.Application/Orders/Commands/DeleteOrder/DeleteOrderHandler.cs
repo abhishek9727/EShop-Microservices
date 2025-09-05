@@ -1,4 +1,4 @@
-﻿/*using BuildingBlocks.CQRS;
+﻿using BuildingBlocks.CQRS;
 using Ordering.Application.Data;
 using Ordering.Domain.VolumeObject;
 
@@ -24,7 +24,6 @@ public class DeleteOrderHandler(IApplicationDbContext dbContext)
         dbContext.Orders.Remove(order);
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        return new DeleteOrderResult(true);        
+        return new DeleteOrderResult(true);
     }
 }
-*/
