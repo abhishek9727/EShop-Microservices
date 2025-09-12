@@ -1,5 +1,6 @@
 ﻿using BuildingBlocks.CQRS;
 using Ordering.Application.Data;
+using Ordering.Application.Exceptions;
 using Ordering.Domain.VolumeObject;
 
 namespace Ordering.Application.Orders.Commands.DeleteOrder;
@@ -25,5 +26,6 @@ public class DeleteOrderHandler(IApplicationDbContext dbContext)
         await dbContext.SaveChangesAsync(cancellationToken);
 
         return new DeleteOrderResult(true);
+
     }
 }
